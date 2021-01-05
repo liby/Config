@@ -1,1 +1,1 @@
-# Some of the configuration files I'm using myself
+# Personal self-use configuration
