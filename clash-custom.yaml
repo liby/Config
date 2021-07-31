@@ -1,4 +1,4 @@
-# 2020-11-26 14:20
+# 2021-07-22 23:45
 
 # Port of HTTP(S) proxy server on the local end
 # port: 7890
@@ -25,7 +25,7 @@ allow-lan: false
 # '*': bind all IP addresses
 # 192.168.122.11: bind a single IPv4 address
 # "[aaaa::a8aa:ff:fe09:57d8]": bind a single IPv6 address
-bind-address: '*'
+bind-address: "*"
 
 # Clash router working mode
 # rule: rule-based packet routing
@@ -64,8 +64,8 @@ external-controller: 127.0.0.1:9090
 # e.g. foo.example.com > *.example.com > .example.com
 # P.S. +.foo.com equals to .foo.com and foo.com
 hosts:
-  'mtalk.google.com': 108.177.125.188
-  't.cn': 203.107.55.116
+  "mtalk.google.com": 108.177.125.188
+  "t.cn": 203.107.55.116
   # '*.clash.dev': 127.0.0.1
   # '.dev': 127.0.0.1
   # 'alpha.clash.dev': '::1'
@@ -89,11 +89,15 @@ dns:
   # i.e. questions to these domain names will always be answered with their
   # real IP addresses
   fake-ip-filter:
-  #   - '*.lan'
-  #   - localhost.ptlogin2.qq.com
-    - 'dns.msftncsi.com'
-    - 'www.msftncsi.com'
-    - 'www.msftconnecttest.com'
+    - "*.lan"
+    - localhost.ptlogin2.qq.com
+    - "+.srv.nintendo.net"
+    - "+.stun.playstation.net"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "+.xboxlive.com"
+    - "msftconnecttest.com"
+    - "xbox.*.microsoft.com"
 
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
@@ -130,7 +134,7 @@ dns:
       # - 240.0.0.0/4
 
 proxies:
-# 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
+  # 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
   # Shadowsocks
   # The supported ciphers (encryption methods):
   #   aes-128-gcm aes-192-gcm aes-256-gcm
@@ -256,8 +260,8 @@ proxies:
     psk: yourpsk
     # version: 2
     # obfs-opts:
-      # mode: http # or tls
-      # host: bing.com
+    # mode: http # or tls
+    # host: bing.com
 
   # Trojan
   - name: "trojan"
@@ -291,7 +295,6 @@ proxies:
     # obfs-param: domain.tld
     # protocol-param: "#"
     # udp: true
-
 
 # 服务器节点订阅
 proxy-providers:
@@ -338,19 +341,18 @@ proxy-providers:
   #     interval: 600
   #     url: http://www.gstatic.com/generate_204
 
-
 proxy-groups:
-# 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
+  # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
 
-#
-# 策略组说明
-#
-# 「MATCH」类似 Surge 的「Final」，此处用于选择白名单模式(PROXY 策略)和黑名单模式(DIRECT 策略)
-#
-# 「Streaming」和「StreamingSE」比较好理解，有专用于流媒体的节点就设置到其中，如果没有「StreamingSE」的需求可以连带 Rule 部分一起删掉，「Streaming」需至少保留 Rule，用「PROXY」即可。
-#
-# 「PROXY」是代理规则策略，它可以指定为某个节点或嵌套一个其他策略组，如：「自动测试」、「Fallback」或「负载均衡」的策略组，关于这 3 个策略组的具体示例可以看官方示例：https://github.com/Dreamacro/clash
-#
+  #
+  # 策略组说明
+  #
+  # 「MATCH」类似 Surge 的「Final」，此处用于选择白名单模式(PROXY 策略)和黑名单模式(DIRECT 策略)
+  #
+  # 「Streaming」和「StreamingSE」比较好理解，有专用于流媒体的节点就设置到其中，如果没有「StreamingSE」的需求可以连带 Rule 部分一起删掉，「Streaming」需至少保留 Rule，用「PROXY」即可。
+  #
+  # 「PROXY」是代理规则策略，它可以指定为某个节点或嵌套一个其他策略组，如：「自动测试」、「Fallback」或「负载均衡」的策略组，关于这 3 个策略组的具体示例可以看官方示例：https://github.com/Dreamacro/clash
+  #
 
   # 注意此处的「use」而不是「proxies」，当然也可以不用在此先嵌套一个策略组进行选择，可以直接使用，如
   #
@@ -379,7 +381,7 @@ proxy-groups:
       - "vmess"
     use:
       - DuckDuckGoList
-    url: 'http://www.gstatic.com/generate_204'
+    url: "http://www.gstatic.com/generate_204"
     interval: 300
 
   # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
@@ -391,7 +393,7 @@ proxy-groups:
     use:
       - DuckDuckGoList
 
-    url: 'http://www.gstatic.com/generate_204'
+    url: "http://www.gstatic.com/generate_204"
     interval: 300
 
   # 代理节点选择
@@ -429,88 +431,117 @@ proxy-groups:
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 
 rule-providers:
-# name: # Provider 名称
-#   type: http # http 或 file
-#   behavior: classical # 或 ipcidr、domain
-#   path: # 文件路径
-#   url: # 只有当类型为 HTTP 时才可用，您不需要在本地空间中创建新文件。
-#   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
+  # name: # Provider 名称
+  #   type: http # http 或 file
+  #   behavior: classical # 或 ipcidr、domain
+  #   path: # 文件路径
+  #   url: # 只有当类型为 HTTP 时才可用，您不需要在本地空间中创建新文件。
+  #   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
 
   Unbreak:
     type: http
     behavior: classical
     path: ./RuleSet/Unbreak.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Unbreak.yaml
     interval: 86400
 
   Streaming:
     type: http
     behavior: classical
     path: ./RuleSet/StreamingMedia/Streaming.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Streaming.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Streaming.yaml
     interval: 86400
 
   # StreamingSE:
   #   type: http
   #   behavior: classical
   #   path: ./RuleSet/StreamingMedia/StreamingSE.yaml
-  #   url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/StreamingSE.yaml
+  #   url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/StreamingSE.yaml
   #   interval: 86400
 
   Global:
     type: http
     behavior: classical
     path: ./RuleSet/Global.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Global.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Global.yaml
     interval: 86400
 
   China:
     type: http
     behavior: classical
     path: ./RuleSet/China.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/China.yaml
     interval: 86400
 
   ChinaIP:
     type: http
     behavior: ipcidr
     path: ./RuleSet/Extra/ChinaIP.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
 
 # 规则
-rules:
-  # Unbreak
-  - RULE-SET,Unbreak,DIRECT
+# rules:
+#   # Unbreak
+#   - RULE-SET,Unbreak,DIRECT
 
-  # Global Area Network
+#   # Global Area Network
 
-  # (Streaming Media)
-  - RULE-SET,Streaming,Streaming
+#   # (Streaming Media)
+#   - RULE-SET,Streaming,Streaming
 
-  # (StreamingSE)
-  # - RULE-SET,StreamingSE,StreamingSE
+#   # (StreamingSE)
+#   # - RULE-SET,StreamingSE,StreamingSE
 
-  # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
-  - RULE-SET,Global,PROXY
+#   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
+#   - RULE-SET,Global,PROXY
 
-  # China Area Network
-  - RULE-SET,China,DIRECT
+#   # China Area Network
+#   - RULE-SET,China,DIRECT
 
-  # Local Area Network
-  - IP-CIDR,192.168.0.0/16,DIRECT
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,127.0.0.0/8,DIRECT
-  - IP-CIDR,100.64.0.0/10,DIRECT
-  - IP-CIDR,224.0.0.0/4,DIRECT
+#   # Local Area Network
+#   - IP-CIDR,192.168.0.0/16,DIRECT
+#   - IP-CIDR,10.0.0.0/8,DIRECT
+#   - IP-CIDR,172.16.0.0/12,DIRECT
+#   - IP-CIDR,127.0.0.0/8,DIRECT
+#   - IP-CIDR,100.64.0.0/10,DIRECT
+#   - IP-CIDR,224.0.0.0/4,DIRECT
+#   - IP-CIDR,fe80::/10,DIRECT
 
-  # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
-  # - RULE-SET,ChinaIP,DIRECT
-  # Tencent
-  - IP-CIDR,119.28.28.28/32,DIRECT
-  - IP-CIDR,182.254.116.0/24,DIRECT
-  # GeoIP China
-  - GEOIP,CN,DIRECT
+#   # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
+#   # - RULE-SET,ChinaIP,DIRECT
+#   # Tencent
+#   # - IP-CIDR,119.28.28.28/32,DIRECT
+#   # - IP-CIDR,182.254.116.0/24,DIRECT
+#   # GeoIP China
+#   # - GEOIP,CN,DIRECT
 
-  - MATCH,MATCH
+#   - MATCH,MATCH
+
+script:
+  code: |
+    def main(ctx, metadata):
+      if metadata["host"] == "gist.github.com":
+        return "PROXY"
+
+      ip = ctx.resolve_ip(metadata["host"]) or metadata["dst_ip"]
+      if ip == "":
+        return "DIRECT"
+
+      code = ctx.geoip(ip)
+      if code == "LAN" or code == "CN":
+        return "DIRECT"
+
+      directList = ['ChinaIP', 'Unbreak', 'China']
+      for name in directList:
+        if ctx.rule_providers[name].match(metadata):
+          ctx.log('[China] matched %s' % metadata["host"])
+          return "DIRECT"
+
+      if ctx.rule_providers["Streaming"].match(metadata):
+        return "Streaming"
+
+      if ctx.rule_providers["Global"].match(metadata):
+        return "PROXY"
+
+      return "PROXY" # default policy for requests which are not matched by any other script
