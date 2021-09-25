@@ -1,0 +1,4 @@
+#nga
+^https:\/\/ngabbs.com\/nuke.php\?? url script-request-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js
+
+hostname = ngabbs.com
