@@ -18,15 +18,15 @@
             "addons": "https://github.com/liby/config/blob/main/script/jd.qxrewrite, tag=JD_获取 Cookie"
         },
         {
-            "config": "15 10 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, tag=美团, enabled=true, img-url=https://raw.githubusercontent.com/Orz-3/task/master/meituan.png",
+            "config": "15 10 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, tag=美团, enabled=true, img-url=https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Task/meituan.png",
             "addons": "https://github.com/liby/config/blob/main/script/meituan.qxrewrite, tag=美团_获取 Cookie"
         },
         {
-            "config": "15 10 * * * https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js, tag=NGA 刮墙, enabled=true, img-url=https://raw.githubusercontent.com/Orz-3/task/master//nga.png",
+            "config": "15 10 * * * https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js, tag=NGA 刮墙, enabled=true, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/nga.png",
             "addons": "https://github.com/liby/config/blob/main/script/ngabbs.qxrewrite, tag=NGA_获取Cookie"
         },
         {
-            "config": "16 10 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=Bilibili 签到, img-url=https://raw.githubusercontent.com/Orz-3/task/master/bilibili.png, enabled=true",
+            "config": "16 10 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=Bilibili 签到, img-url=https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Task/bilibili.png, enabled=true",
             "addons": "https://raw.githubusercontent.com/liby/config/main/script/bilibili.qxrewrite, tag=Bilibili_获取 Cookie"
         },
         {
