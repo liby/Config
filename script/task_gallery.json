@@ -3,39 +3,47 @@
     "task": [
         {
             "config": "10 10 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/unicom_signin.js, tag=中国联通, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/10010.png, enabled=false",
-            "addons": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/unicom_signin.qxrewrite, tag=联通_获取 Cookie"
+            "addons": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/unicom_signin.qxrewrite, tag=📲 联通_获取 Cookie"
         },
         {
             "config": "11 10 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.js, tag=领取吃货豆, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/elem.png, enabled=true",
-            "addons": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.qxrewrite, tag=饿了么_获取 Cookie"
+            "addons": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.qxrewrite, tag=📲 饿了么_获取 Cookie"
         },
         {
             "config": "12 10 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_mission.js, tag=领取会员任务, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/elem.png, enabled=true",
-            "addons": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.qxrewrite, tag=饿了么_获取 Cookie"
+            "addons": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.qxrewrite, tag=📲 饿了么_获取 Cookie"
         },
         {
             "config": "13 10 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东多合一签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/jd.png,enabled=true",
-            "addons": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_Remote_Cookie.conf, tag=JD_获取 Cookie"
+            "addons": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_Remote_Cookie.conf, tag=📲 JD_获取 Cookie"
         },
         {
             "config": "15 10 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, tag=美团, enabled=true, img-url=https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Task/meituan.png",
-            "addons": "https://raw.githubusercontent.com/liby/config/main/script/meituan.qxrewrite, tag=美团_获取 Cookie"
+            "addons": "https://raw.githubusercontent.com/liby/config/main/script/meituan.qxrewrite, tag=📲 美团_获取 Cookie"
         },
         {
-            "config": "15 10 * * * https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js, tag=NGA 刮墙, enabled=true, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/nga.png",
-            "addons": "https://raw.githubusercontent.com/liby/config/main/script/ngabbs.qxrewrite, tag=NGA_获取Cookie"
+            "config": "16 10 * * * https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js, tag=NGA 刮墙, enabled=true, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/nga.png",
+            "addons": "https://raw.githubusercontent.com/liby/config/main/script/ngabbs.qxrewrite, tag=📲 NGA_获取Cookie"
         },
         {
-            "config": "16 10 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=Bilibili 签到, img-url=https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Task/bilibili.png, enabled=true",
-            "addons": "https://raw.githubusercontent.com/liby/config/main/script/bilibili.qxrewrite, tag=Bilibili_获取 Cookie"
+            "config": "17 10 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=Bilibili 签到, img-url=https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Task/bilibili.png, enabled=true",
+            "addons": "https://raw.githubusercontent.com/liby/config/main/script/bilibili.qxrewrite, tag=📲 Bilibili_获取 Cookie"
         },
         {
-            "config": "17,20 10 * * *  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js, tag=百度贴吧, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba.png, enabled=true",
-            "addons": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.qxrewrite, tag=贴吧_获取 Cookie"
+            "config": "18,21 10 * * *  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js, tag=百度贴吧, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba.png, enabled=true",
+            "addons": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.qxrewrite, tag=📲 贴吧_获取 Cookie"
         },
         {
             "config": "23 10 * * *  https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, tag=天天挖矿, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/ttwk.png, enabled=true",
-            "addons": "https://raw.githubusercontent.com/liby/config/main/script/ttwk.qxrewrite, tag=天天挖矿_获取 Cookie"
+            "addons": "https://raw.githubusercontent.com/liby/config/main/script/ttwk.qxrewrite, tag=📲 天天挖矿_获取 Cookie"
+        },
+        {
+            "config": "24 10 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js, tag=航旅纵横, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/umetrip.png, enabled=true",
+            "addons": "https://raw.githubusercontent.com/liby/config/main/script/umetrip.qxrewrite, tag=📲 航旅纵横_获取 Cookie"
+        },
+        {
+            "config": "25 10 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js, tag=哈啰出行, img-url=https://raw.githubusercontent.com/lysoul147/quantumultx/main/icon/hellobike.png, enabled=true",
+            "addons": "https://raw.githubusercontent.com/liby/config/main/script/hellobike.qxrewrite, tag=📲 哈啰出行_获取 Cookie"
         }
     ],
     "description": "Script Gallery"
