@@ -1,8 +1,6 @@
 [user]
-    email = user@play.com
+    email = user@personal.com
     name = Brayn Lee
-[push]
-    default = simple
 # [http]
 # 	postBuffer = 524288000
 [alias]
@@ -128,6 +126,6 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
 
-[includeIf "gitdir:~/Code/Work/"]
+[includeIf "gitdir:~/Code/Company/"]
     email = user@work.com
     name = Brayn Lee
