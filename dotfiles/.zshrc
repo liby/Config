@@ -15,10 +15,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # 默认让终端去走代理,这样就不需要每次都复制拷贝一下了,
 # 方便的同时,代理程序去智能分流(国内 IP 直连,国外走代理),
 # 避免了连接国内 IP 地址时“绕远”.
-export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:8080 all_proxy=socks5://127.0.0.1:1080
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="$PATH:./node_modules/.bin"
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+export PATH="$N_PREFIX/bin:$PATH"
 
 # Base Set
 COMPLETION_WAITING_DOTS="true"
@@ -52,7 +54,7 @@ fi
 # unsetproxy 取消代理
 # setproxy 设置代理
 # ip & ipcn  查看 IP
-alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890;echo \"Set proxy successfully\" "
+alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:8080 all_proxy=socks5://127.0.0.1:1080;echo \"Set proxy successfully\" "
 alias unsetproxy="unset http_proxy;unset https_proxy;unset all_proxy;echo \"Unset proxy successfully\" "
 alias ipcn="curl myip.ipip.net"
 alias ip="curl ip.sb"
@@ -69,3 +71,4 @@ setopt correct
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
