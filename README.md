@@ -1,1 +1,3 @@
-# Personal self-use configuration
+# Config
+
+Bryan's daily configs, scripts etc.
