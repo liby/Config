@@ -3,3 +3,5 @@
 
 [Script]
 NGA_刮墙 = type=cron,cronexp=11 10 * * *,timeout=60,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/nga.js
+
+飞客茶馆签到 = type=cron,cronexp=12 10 * * *,timeout=60,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js

@@ -1,8 +1,9 @@
-#!name=获取 NGA Cookies
+#!name=获取任务所需 Cookies
 #!desc=请在使用后手动将其禁用，以免产生不必要的 MITM
 
 [Script]
 NGA_玩家社区_Cookies = type=http-request,pattern=^https?:\/\/ngabbs.com\/nuke.php$,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/nga.js,requires-body=true
+飞客茶馆_Cookies = type=http-request,pattern=^https:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=getdata&.*,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.cookie.js
 
 [MITM]
-hostname = %APPEND% ngabbs.com
+hostname = %APPEND% ngabbs.com, www.flyert.com
